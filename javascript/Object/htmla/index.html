@@ -8,15 +8,14 @@
   </head>
   <body></body>
   <script>
-    let arrays = ["a", "b", "c "];
-    arrays.push("d");
-    const index1 = arrays[0];
-    console.log(index1);
-    for (let i = 0; i < arrays.length; i++) {
-      console.log("Index: " + i + " Value :" + arrays[i]);
+    let array = [
+      [1, 2],
+      [3, 4],
+    ];
+    for (let i = 0; i < array.length; i++) {
+      for (let j = 0; j < array[i].length; j++) {
+        console.log(array[i][j]);
+      }
     }
-    arrays.forEach(function (array) {
-      console.log(array);
-    });
   </script>
 </html>
