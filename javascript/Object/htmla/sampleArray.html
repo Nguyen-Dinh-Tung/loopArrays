@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="input" />
+    <button id="btn-add">Add</button>
+    <button id="btn-display">Display</button>
+    <p id="result">Hiển thị kết quả array</p>
+    <br />
+  </body>
+  <script>
+    const btnAdd = document.getElementById("btn-add");
+    const btnDisplay = document.getElementById("btn-display");
+    const input = document.getElementById("input");
+    let result = document.getElementById("result");
+    let x = 0;
+    let e = 0;
+    let array = [];
+    btnAdd.addEventListener("click", addArray);
+    function addArray() {
+      array.push(input.value);
+      input.value = "";
+      console.log(array);
+    }
+    btnDisplay.addEventListener("click", displayArray);
+    function displayArray() {
+      console.log(array[x]);
+      for (e = 0; e < x; e++) {}
+      if (array[x] == undefined) {
+        alert("đã hết giá trị của mảng");
+      } else {
+        result.innerHTML +=
+          "<hr>" +
+          "Giá trị phần tử : " +
+          array[x] +
+          "-" +
+          " Vị trí trỏ mục : " +
+          e;
+      }
+      x++;
+    }
+  </script>
+</html>

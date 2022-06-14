@@ -8,14 +8,25 @@
   </head>
   <body></body>
   <script>
-    let array = [
-      [1, 2],
-      [3, 4],
-    ];
-    for (let i = 0; i < array.length; i++) {
-      for (let j = 0; j < array[i].length; j++) {
-        console.log(array[i][j]);
-      }
-    }
+    // let a = ["j", "a", "v", "a"];
+    // a.push("script");
+    // a.unshift("codegym");
+    // console.log(a);
+    // a.shift();
+    // console.log(a);
+    // a.pop();
+    // console.log(a);
+    // a.reverse();
+    // console.log(a);
+    // a.sort();
+    // console.log(a);
+    let points = [40, 100, 2, 25, 30];
+    points.sort(function (a, b) {
+      return a - b;
+    });
+    points.sort(function (a, b) {
+      return b - a;
+    });
+    document.write(points + "<br>");
   </script>
 </html>
