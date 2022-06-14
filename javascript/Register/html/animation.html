@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body onload="onLoad()">
+<!--<h2>Nhập chuột vào di chuyển quả bóng</h2>-->
+<img id="img" src="/img/img.jpg" alt="random" width="10%" style="margin-bottom: 50px ; position: relative ; left: 0 ; top: 0" >
+<!--<button id="btn" >click</button>-->
+</body>
+<script>
+    // const btn = document.getElementById('btn')
+    let img = document.getElementById('img')
+    function goA(){
+        img.style.left = parseInt(img.style.left) - 50 + 'px';
+    }
+
+    function goB(){
+        img.style.top = parseInt(img.style.top) - 50 + 'px';
+    }
+    function goC(){
+        img.style.left = parseInt(img.style.left) + 50 + 'px';
+    }
+    function goD(){
+        img.style.top = parseInt(img.style.top) + 50 + 'px';
+    }
+
+    function moveSelection(evt){
+        switch (evt.keyCode){
+            case 37 :
+                goA()
+                break;
+            case 38 :
+                goB()
+                break;
+            case 39 :
+                goC()
+                break;
+            case 40 :
+                goD()
+                break;
+        }
+
+    }
+    function onLoad(){
+    window.addEventListener('keydown', moveSelection)
+    }
+
+
+
+
+
+</script>
+</html>

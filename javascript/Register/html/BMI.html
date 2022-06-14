@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let height = prompt('Nhập vào chiều cao cm')
+    let weight = prompt('Nhập vào cân nặng kg')
+    const bmi = weight*10000 / Math.pow(height,2)
+    alert('bmi ' + bmi)
+    if(bmi<=18.5){
+        alert('Vui lòng ăn bồi dưỡng thêm')
+    }else if(bmi<25 && bmi>18.5){
+        alert('Bạn có thân hình vừa vặn')
+    }else if(bmi>25){
+        alert('Thân hình hơi béo 1 chút vui lòng nhịn ăn')
+    }
+</script>
+</html>

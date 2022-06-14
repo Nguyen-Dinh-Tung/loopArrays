@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Do you love me</h2>
+<button id="btn_yes">Yes</button>
+<button id="btn_no">no</button>
+
+</body>
+<script>
+    let btn_yes = document.getElementById('btn_yes')
+    let btn_no = document.getElementById('btn_no')
+    btn_yes.addEventListener('click', alertLove)
+    function alertLove(){
+        alert('Me too')
+    }
+
+    btn_no.addEventListener('mouseover', randomGo)
+    function randomGo() {
+        btn_no.style.display='none'
+    }
+</script>
+</html>

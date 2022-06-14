@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    //    IMG 2
+    let messi = document.getElementById('img_2')
+
+    let srcImg_2 = "./img/messi/m1.jpg"
+
+    let srcMessi1 = 'http://localhost:63342/Register/img/messi/m1.jpg'
+
+    let srcImg_2_2 = "./img/messi/m2.jpg"
+
+    let srcMessi2 = "http://localhost:63342/Register/img/messi/m2.jpg"
+
+    let srcImg_2_2_2 = "./img/messi/m3.jpg"
+
+    console.log(messi.src)
+
+    if(messi.src == srcMessi1){
+        messi.src = srcImg_2_2
+    }else if(messi.src == srcMessi2){
+        messi.src = srcImg_2_2_2
+    }else {
+        messi.src = srcImg_2
+    }
+
+
+
+    //    IMG 3
+    let ronaldo = document.getElementById('img_3')
+    let srcImg_3 = "./img/ronaldo/c1.jpg"
+    let srcRonadol1 = 'http://localhost:63342/Register/img/ronaldo/c1.jpg'
+    let srcImg_3_3 = "./img/ronaldo/c2.jpg"
+    let srcRonadol2 = 'http://localhost:63342/Register/img/ronaldo/c2.jpg'
+    let srcImg_3_3_3 = "./img/ronaldo/c3.jpg"
+
+    if(ronaldo.src == srcRonadol1){
+        ronaldo.src = srcImg_3_3
+    }else if(under_cut.src == demo2ImgSrc){
+        under_cut.src = srcImg_1_1_1
+    }else {
+        under_cut.src = srcImg_1
+    }
+</script>
+</html>

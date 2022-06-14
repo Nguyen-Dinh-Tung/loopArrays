@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form id="form">
+<input type="checkbox" id="check_1" name="check">
+<input type="checkbox" id="check_2" name="check">
+<input type="checkbox" id="check_3" name="check">
+</form>
+
+</body>
+<script>
+    let check_1 = document.getElementById('check_1')
+    let check_2 = document.getElementById('check_2')
+    let check_3 = document.getElementById('check_3')
+    check_1.addEventListener('click', check1)
+    check_2.addEventListener('click', check2)
+    check_3.addEventListener('click', check3)
+    function check1(){
+        if(check_1.checked && check_2.checked){
+            check_3.checked = false
+        }
+    }
+    function check2(){
+        if(check_2.checked && check_3.checked){
+            check_1.checked = false
+        }
+    }
+    function check3(){
+        if(check_1.checked && check_3.checked){
+            check_2.checked = false
+        }
+    }
+
+</script>
+</html>

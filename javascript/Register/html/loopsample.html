@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="clickToStart()">Bắt đầu</button>
+</body>
+<script>
+<!--  lesson 1 -->
+    // for(let i = 1 ; i< 100; i++){
+    //     document.write(i + '<br>')
+    // }
+    // alert('Bạn đã hoàn thành')
+<!--  lesson 2 -->
+    // let a = prompt('Nhập nhiệt độ hiện tại')
+    // if(a<20){
+    //     alert('Vui lòng tăng nhiệt độ lên trên 20 độ')
+    //     a = prompt('Nhập nhiệt độ hiện tại')
+    // }else if(a>100){
+    //     alert('Vui lòng giảm nhiệt độ xuống dưới 100 độ')
+    //     a = prompt('Nhập nhiệt độ hiện tại')
+    // }
+<!--  lesson 3 -->
+    // let a = 0;
+    // let b = 1;
+    // let c;
+    // for(let i = 0 ; i<20 ; i++){
+    //     c = a + b
+    //     a = b
+    //     b = c
+    //     console.log(c)
+    // }
+<!--  lesson 4 -->
+// let a = 0;
+// let b = 1;
+// let c;
+// for(let i = 0 ; i<20 ; i++){
+//     if(a==0){
+//         alert('a là số đầu tiên chia hết cho 5')
+//     }else if(b==0){
+//         alert('b là số đầu tiên chia hết cho 5')
+//
+//     }else if(c==0){
+//         alert('c là số đầu tiên chia hết cho 5')
+//     }
+//     c = a + b
+//     a = b
+//     b = c
+//    cosole.log(c)
+//
+// }
+<!--  lesson 4 -->
+
+// let a = 0;
+// let b = 1;
+// let c;
+// let total = 0;
+// for(let i = 0 ; i<20 ; i++){
+//     c = a + b
+//     a = b
+//     b = c
+//     console.log(c)
+//     total += c
+// }
+// console.log(total)
+<!--  lesson 5 -->
+// let n = 0 ;
+// for(let i = 0 ; i<30 ; i++){
+//     n+=7
+//     console.log(n)
+// }
+<!--  lesson 6 -->
+//     let n = 1 ;
+// for(let i = 0 ; i<100 ; i++){
+//     n++
+//     if(n%3==0){
+//         document.write(n+'Fizz' + '<br>')
+//         if(n%3==0 && n%5==0){
+//             document.write(n+'FizzBuzz' + '<br>')
+//         }
+//     }else if(n%5==0){
+//         document.write(n+'Buzz' + '<br>')
+//     }
+// }
+<!--  lesson 7 -->
+        function clickToStart(){
+            let a = prompt('Nhập vào khoảng con số mà bạn muốn đoán')
+            let b = prompt('Nhập vào số bạn muốn đoán')
+            let c =    Math.floor(Math.random()*a)
+                        if(b == c){
+                            alert('Bạn chiến thắng')
+                        }else if(b != c){
+                            for(let i = 0 ; i<2 ; i++){
+                                b = prompt('Nhập vào khoảng con số mà bạn muốn đoán')
+                            }
+                        }
+        }
+Number.isInteger(Math.sqrt(n)!=true)
+</script>
+</html>
+

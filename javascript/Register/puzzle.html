@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <img id="img_1" src="./img/haaland/h1.jpg" alt="random">
+    <img id="img_2" src="./img/messi/m1.jpg" alt="random">
+    <img id="img_3" src="./img/ronaldo/c1.jpg" alt="random">
+
+</div>
+
+</body>
+<script>
+    <!--variable-->
+    let img_1 = document.getElementById('img_1')
+    let img_2 = document.getElementById('img_2')
+    let img_3 = document.getElementById('img_3')
+    let selecOne_1 = 'http://localhost:63342/Register/img/haaland/h1.jpg'
+    let selecOne_2 = 'http://localhost:63342/Register/img/messi/m1.jpg'
+    let selecOne_3 = ' http://localhost:63342/Register/img/ronaldo/c1.jpg'
+    let selecTwo_1 = 'http://localhost:63342/Register/img/haaland/h2.jpg'
+    let selecTwo_2 = 'http://localhost:63342/Register/img/messi/m2.jpg'
+    let selecTwo_3 = ' http://localhost:63342/Register/img/ronaldo/c2.jpg'
+    let selecThree_1 = 'http://localhost:63342/Register/img/haaland/h3.jpg'
+    let selecThree_2 = 'http://localhost:63342/Register/img/messi/m3.jpg'
+    let selecThree_3 = ' http://localhost:63342/Register/img/ronaldo/c3.jpg'
+
+    if(img_1.src == selecOne_3 && img_2.src == selecTwo_3 &&  img_3.src == selecThree_3){
+        document.write('Bạn là nhất')
+    }
+
+    //hàm handle
+    img_1.addEventListener('click', changeSrcImg_1)
+    img_2.addEventListener('click', changeSrcImg_2)
+    img_3.addEventListener('click', changeSrcImg_3)
+    //handle Check
+    //handle IMG 1
+    function changeSrcImg_1() {
+        //IMG 1
+        let under_cut = document.getElementById('img_1')
+        let srcImg_1 = './img/haaland/h1.jpg';
+        let srcImg_1_1 = './img/messi/m1.jpg';
+        let srcImg_1_1_1 = "./img/ronaldo/c1.jpg"
+        if (under_cut.src == selecOne_1) {
+            under_cut.src = srcImg_1_1
+        } else if (under_cut.src == selecOne_2) {
+            under_cut.src = srcImg_1_1_1
+        } else {
+            under_cut.src = srcImg_1
+        }
+        if(img_1.src == selecOne_1 && img_2.src == selecTwo_1 &&  img_3.src == selecThree_1){
+            document.write('Bạn là nhất')
+        };
+        if(img_1.src == selecOne_2 && img_2.src == selecTwo_2 &&  img_3.src == selecThree_2){
+            document.write('Bạn là nhất')
+        };
+        if(img_1.src == selecOne_3 && img_2.src == selecTwo_3 &&  img_3.src == selecThree_3){
+            document.write('Bạn là nhất')
+        }
+    }
+
+    //handle IMG 2
+
+    function changeSrcImg_2() {
+        //IMG 2
+        let under_cut = document.getElementById('img_2')
+        let srcImg_2 = './img/haaland/h2.jpg';
+        let srcImg_2_2 = './img/messi/m2.jpg';
+        let srcImg_2_2_2 = "./img/ronaldo/c2.jpg"
+        if (under_cut.src == selecTwo_1) {
+            under_cut.src = srcImg_2_2
+        } else if (under_cut.src == selecTwo_2) {
+            under_cut.src = srcImg_2_2_2
+        } else {
+            under_cut.src = srcImg_2
+        };
+        if(img_1.src == selecOne_1 && img_2.src == selecTwo_1 &&  img_3.src == selecThree_1){
+            document.write('Bạn là nhất')
+        };
+        if(img_1.src == selecOne_2 && img_2.src == selecTwo_2 &&  img_3.src == selecThree_2){
+            document.write('Bạn là nhất')
+        };
+        if(img_1.src == selecOne_3 && img_2.src == selecTwo_3 &&  img_3.src == selecThree_3){
+            document.write('Bạn là nhất')
+        }
+    }
+    //handle IMG 3
+    function changeSrcImg_3() {
+        //IMG 3
+        let under_cut = document.getElementById('img_3')
+        let srcImg_3 = './img/haaland/h3.jpg';
+        let srcImg_3_3 = './img/messi/m3.jpg';
+        let srcImg_3_3_3 = "./img/ronaldo/c3.jpg"
+        console.log(under_cut.src)
+        if (under_cut.src == selecThree_1) {
+            under_cut.src = srcImg_3_3
+        } else if (under_cut.src == selecThree_2) {
+            under_cut.src = srcImg_3_3_3
+        } else {
+            under_cut.src = srcImg_3
+        };
+
+        if(img_1.src == selecOne_1 && img_2.src == selecTwo_1 &&  img_3.src == selecThree_1){
+            document.write('Bạn là nhất')
+        };
+        if(img_1.src == selecOne_2 && img_2.src == selecTwo_2 &&  img_3.src == selecThree_2){
+            document.write('Bạn là nhất')
+        };
+        if(img_1.src == selecOne_3 && img_2.src == selecTwo_3 &&  img_3.src == selecThree_3){
+            document.write('Bạn là nhất')
+        }
+    }
+
+
+</script>
+</html>

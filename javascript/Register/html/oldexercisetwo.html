@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--cesius to Fahrenheit-->
+<h2>Cesius to Fahrenheit</h2>
+<input type="text" id="input">
+<button id="btn">Giải</button>
+<br>
+<p>Kết quả <strong id="result"></strong></p>
+<!--cesius to Fahrenheit-->
+<!--met to feet-->
+<h2>Met to Feet</h2>
+<input type="text" id="input_met">
+<button id="btn_met">Giải</button>
+<br>
+<p>Kết quả <strong id="result_met"></strong></p>
+<!--met to feet-->
+<!--area square-->
+<h2>Area square</h2>
+<input type="text" id="input_square">
+<button id="btn_Area">Giải</button>
+<br>
+<p>Kết quả <strong id="result_Area"></strong></p>
+<!--area square-->
+
+<!--area square-->
+<h2>Area triangle</h2>
+<input type="text" id="input_triangle_edge">
+<input type="text" id="input_triangle_edge_2">
+
+<button id="btn_triangle">Giải</button>
+<br>
+<p>Kết quả <strong id="result_triangle"></strong></p>
+
+<!--area triangle-->
+<!--rectangular area-->
+<h2>rectangular area</h2>
+<input type="text" id="input_width_rectangular">
+<input type="text" id="input_width_rectangular_1">
+
+<button id="btn_area_tangular">Giải</button>
+<br>
+<p>Kết quả <strong id="result_rectangular"></strong></p>
+<!--rectangular area-->
+<!--PTB 1-->
+<h1>Giải phương trình bậc 1</h1>
+<h2>ax + b = 0</h2>
+<input type="text" id="number_one">
+<input type="text" id="number_to">
+
+<button id="btn_operator">Giải</button>
+<p>Kết quả <strong id="result_operator"></strong></p>
+<!--PTB 1-->
+<!--PTB 2-->
+<h1>Giải phương trình bậc 2</h1>
+<h2>ax^2 + b + c = 0</h2>
+<input type="text" id="number_one_2">
+<input type="text" id="number_to_2">
+<input type="text" id="number_to_3">
+
+<button id="btn_operator_2">Giải</button>
+<p>Kết quả <strong id="result_operator_2"></strong></p>
+<!--PTB 2-->
+<!--Age person-->
+<h2>Age person</h2>
+<input type="text" id="input_age">
+<button id="btn_age">Kết quả</button>
+<!--Age person-->
+<!--Three number -->
+
+<h1>Điều kiện để abc trở thành 1 tam giác</h1>
+<h2>ax^2 + b + c = 0</h2>
+<input type="text" id="n_1">
+<input type="text" id="n_2">
+<input type="text" id="n_3">
+
+<button id="btn_three_number">Giải</button>
+<p>Kết quả <strong id="result_three_number"></strong></p>
+<!--Three number-->
+<!--opera electric-->
+<h2>Tính giá điện</h2>
+<input type="text" id="amount_electric">
+<button id="btn_electric">Tính tiền</button>
+<p>Tổng cộng <strong id="result_electric"></strong></p>
+<!--personal income tax-->
+<h2>Tính thuế thu nhập cá nhân 10%</h2>
+<input type="text" id="amount_wage">
+<button id="btn_income_tax">Tính</button>
+<p>Kết quả <strong id="result_incime_tax"></strong></p>
+<!--personal income tax-->
+<!--Bank interest-->
+<h2>Lãi xuất ngân hàng</h2>
+<label > Nhập % lãi xuất<input type="text" id="amount_interest"></label>
+<br>
+<label >Nhập số tiền vay<input type="text" id="amount_money"></label>
+<br>
+<label >Nhập số tháng vay<input type="text" id="amount_month"></label>
+<br>
+<button id="btn_interest">Tính</button>
+<p>Lãi xuất hàng tháng : <strong id="month_interest"></strong></p>
+<p>Tổng lãi xuất : <strong id="result_interest"></strong></p>
+<!--Bank interest-->
+
+</body>
+<script>
+    <!--cesius to Fahrenheit-->
+    const btn = document.getElementById('btn')
+    btn.addEventListener('click', prizeF)
+    function prizeF(){
+        let result = document.getElementById('result')
+        let input = +document.getElementById('input').value
+        result.innerHTML = input *9/5+32
+    }
+    <!--cesius to Fahrenheit-->
+    <!--met to feet-->
+
+    const btn_met = document.getElementById('btn_met')
+    btn_met.addEventListener('click', prizeMet)
+    function prizeMet(){
+        let result = document.getElementById('result_met')
+        let input_met = +document.getElementById('input_met').value
+        result.innerHTML = input_met *3.28
+    }
+    <!--met to feet-->
+    <!--area square-->
+    const btn_Area = document.getElementById('btn_Area')
+    btn_Area.addEventListener('click', prizeMet)
+    function prizeMet(){
+        let result = document.getElementById('result_Area')
+        let input_square = +document.getElementById('input_square').value
+        result_Area.innerHTML = input_square * input_square
+    }
+    <!--area square-->
+    <!--area triangle-->
+    const btn_triangle = document.getElementById('btn_triangle')
+    btn_triangle.addEventListener('click', prizeTriangle)
+    function prizeTriangle(){
+        let result = document.getElementById('result_triangle')
+        let input_triangle_edge_2 = +document.getElementById('input_triangle_edge_2').value
+        let input_triangle_edge = +document.getElementById('input_triangle_edge').value
+        result.innerHTML = (input_triangle_edge_2 * input_triangle_edge)/2
+    }
+    <!--area triangle-->
+    <!--rectangular area-->
+    const btn_area_tangular = document.getElementById('btn_area_tangular')
+    btn_area_tangular.addEventListener('click', area_tangular)
+    function area_tangular(){
+        let result = document.getElementById('result_rectangular')
+        let input_width_rectangular_1 = +document.getElementById('input_width_rectangular_1').value
+        let input_width_rectangular = +document.getElementById('input_width_rectangular').value
+        result.innerHTML = (input_width_rectangular_1 + input_width_rectangular)/2
+    }
+    <!--rectangular area-->
+    <!--PTB 1-->
+    const btn_operator = document.getElementById('btn_operator')
+    btn_operator.addEventListener('click', operator_one)
+    function operator_one (){
+        let numberA = +document.getElementById('number_one').value
+        let numberB = +document.getElementById('number_to').value
+        let result = document.getElementById('result_operator')
+        if(numberA == 0){
+            result.innerHTML = 'PT vô nghiệm'
+        }else{
+            result.innerHTML = -numberB/numberA
+        }
+    }
+    <!--PTB 1-->
+    <!--PTB 2-->
+    const btn_operator_2 = document.getElementById('btn_operator_2')
+    btn_operator_2.addEventListener('click', operator_two)
+    function operator_two(){
+        let a = document.getElementById('number_one_2').value
+        let b = document.getElementById('number_to_2').value
+        let c = document.getElementById('number_to_3').value
+        let d  = Math.pow(b,2) - 4*a*c;
+        let result = document.getElementById('result_operator_2')
+        if(a==0){
+            result.innerHTML = 'Không phải phương trình bậc 2'
+        }else if(d<0){
+            result.innerHTML = 'Phương trình vô nghiệm'
+        }else if(d=0){
+            result.innerHTML = -b/2*a
+        }else if(d>0){
+            result.innerHTML = 'PT có nghiệm x1 là : ' +((-b+Math.sqrt(d))/2*a ) + 'PT có nghiệm x2 là : '+((-b-Math.sqrt(d))/2*a )
+        }
+
+    }
+    <!--PTB 2-->
+    <!--Age person-->
+    const btn_age = document.getElementById('btn_age')
+    btn_age.addEventListener('click', operatorAge)
+    function operatorAge(){
+        let input_age = +document.getElementById('input_age').value
+        if(input_age <=120 && input_age > 0){
+            alert(input_age + ' là số tuổi chính xác của 1 người')
+        }else{
+            alert(input_age + ' không phải số tuổi chính xác của 1 người')
+        }
+    }
+    <!--Age person-->
+    <!--Three number-->
+    const btn_three_number = document.getElementById('btn_three_number')
+    btn_three_number.addEventListener('click', operator_calc)
+    function operator_calc(){
+        let a = document.getElementById('n_1').value
+        let b = document.getElementById('n_2').value
+        let c = document.getElementById('n_3').value
+        let result = document.getElementById('result_three_number')
+        if(a>0 && b>0 && c>0 && (a+b)>c && (b+c)>a && (a+c)>b){
+            result.innerHTML = '3 cạnh abc hợp lại  là tam giác'
+        }else{
+            result.innerHTML = '3 cạnh abc hợp lại không phải là tam giác'
+
+        }
+    }
+    <!--Three number-->
+    <!--opera electric-->
+    const btn_electric = document.getElementById('btn_electric')
+    btn_electric.addEventListener('click', operaElectric)
+    function operaElectric (){
+        let result = document.getElementById('result_electric')
+        let a = document.getElementById('amount_electric').value
+        if(a>0){
+                if (a<51){
+                    result.innerHTML = a * 1600
+                }else if(a>50 && a<101){
+                result.innerHTML = (a - 50 ) * 1700 + (50 *1600)
+            }else if(a>100 && a<201){
+                    result.innerHTML = (a - 100 ) * 2000 + (50 * 1600) + (50 * 1700)
+                }else if(a>200 && a<301){
+                    result.innerHTML = (a - 200 ) * 2500 + (50 * 1600) + (50 * 1700) + (100 * 2000)
+                }else if(a>300){
+                    result.innerHTML = (a - 300 ) * 2900 + (50 * 1600) + (50 * 1700) + (100 * 2000) +(100 * 2500)
+                }
+
+            }else if(a<0){
+                alert('Vui lòng nhập lại số lượng điện tiêu thụ')
+            }
+    }
+    <!--opera electric-->
+    <!--personal income tax-->
+        const btn_income_tax = document.getElementById('btn_income_tax')
+    btn_income_tax.addEventListener('click', incomeTax)
+        function incomeTax(){
+            let wage = document.getElementById('amount_wage').value
+            let result = document.getElementById('result_incime_tax')
+            if(wage>0){
+                result.innerText = wage*10/100
+            }else{
+                alert('Nhập lại lương')
+            }
+        }
+    <!--personal income tax-->
+    <!--Bank interest-->
+        const btn_interest = document.getElementById('btn_interest')
+        btn_interest.addEventListener('click', operator_interest)
+    function operator_interest(){
+        let result = document.getElementById('result_interest')
+        let resulbMounh = document.getElementById('month_interest')
+        let a = +document.getElementById('amount_interest').value
+        let b = +document.getElementById('amount_money').value
+        let c = +document.getElementById('amount_month').value
+        if(a>0 && b>0 && c>0){
+            result.innerHTML = a * (b/100) * c
+            resulbMounh.innerHTML = a * (b/100)
+        }else{
+            alert('Nhập lại % lãi hoặc số tiền vay , tháng vay')
+        }
+    }
+    <!--Bank interest-->
+
+</script>
+</html>

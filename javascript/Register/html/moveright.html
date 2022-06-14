@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Nhập chuột vào di chuyển quả bóng</h2>
+<img id="img" src="/img/img.jpg" alt="random" width="10%" style="margin-bottom: 50px">
+<button id="btn" >click</button>
+</body>
+<script>
+    const btn = document.getElementById('btn')
+    const img = document.getElementById('img')
+    btn.addEventListener('click', clickGo)
+    function clickGo(){
+        img.style.left = parseInt(img.style.left) + 10 + 'px';
+    }
+    function imgStyle (){
+        img.style.position = 'relative'
+        img.style.left = '0px'
+    }
+    window.onload = imgStyle ();
+</script>
+</html>

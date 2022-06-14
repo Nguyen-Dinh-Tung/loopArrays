@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label for="height">Chiều cao</label>
+<input type="number" id="height" name="rectangulars">
+<br>
+<label for="width">Chiều rộng</label>
+<input type="number" id="width" name="rectangulars">
+<button id="prize"> Result</button>
+<br>
+<p>Kết quả diện tích <strong id="result"></strong></p>
+</body>
+<script>
+    let prize = document.getElementById('prize')
+
+    prize.addEventListener('click', prizes)
+    function prizes (){
+        let height = document.getElementById('height').value
+        let width = document.getElementById('width').value
+        let  result = document.getElementById('result').innerHTML = height * width
+    }
+</script>
+</html>

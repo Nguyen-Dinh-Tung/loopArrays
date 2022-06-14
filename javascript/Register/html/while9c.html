@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    // let value ;
+    // do{
+    //     value = prompt('Nhập vào số từ 1 -> 10 để dừng chạy chương trình')
+    // }while(value<1 || value>10)
+
+
+    let i , j , k, table ;
+    table = "<table border='1' width='300' cellspacing='0' cellspacing='3'>" + 'Bảng cửu chương'
+    for( i = 1 ; i <= 10 ; i ++){
+        table = table + '<tr>'
+        for(j =1 ; j<= 10 ; j ++){
+            table = table + '<td>' + i+'*'+j +'='+ i*j +'</td>'
+        }
+    }
+    table = table + '</table>';
+    document.write(table);
+
+
+</script>
+</html>

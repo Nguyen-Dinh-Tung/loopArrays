@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+  </head>
+  <body></body>
+  <script>
+    // <!--
+    // Giai
+    // thừa
+    // của
+    // một
+    // số  -->
+    // let N = prompt('Nhập số cần tính giai thừa')
+    // let total = 1 ;
+    // for(let j = 1 ; j<N ; j++){
+    //   total = total*j
+    //     document.write(total + '<br>')
+    // }
+    // <!--  in tam giác có góc vông vị trí khác nhau  -->
+    //Góc nhìn thứ nhất
+    // let N = prompt('Nhập cạnh kề dài nhất')
+    // let i = '*'
+    // for (let j = 0 ; j<N ; j++){
+    //     document.write(i + '<br>')
+    //     i = i+'*'
+    // }
+    //Góc nhìn thứ 2
+
+    // let N = prompt("Nhập cạnh kề dài nhất");
+    // let i = "";
+    // for (let j = N - 1; j > 0; j--) {
+    //     document.write("<br>");
+    //     for (let k = j - 1; k > 0; k--) {
+    //         i = "*";
+    //         document.write(i);
+    //     }
+    // }
+    //Góc nhìn thứ 3
+    // let n = prompt("Nhập số ");
+    // let a = "";
+    // for (let i = 1; i <= n; i++) {
+    //   for (let k = n - i; k >= 1; k--) {
+    //     document.write("&ensp;");
+    //   }
+    //   a += "*";
+    //   document.write(a);
+    //   document.write("<br>");
+    // }
+    // góc nhìn thứ 4
+    // let n = prompt("Nhập số ");
+    // let a = "";
+    // for (let i = 1; i <= n; i++) {
+    //   for (let k = n - i; k >= 1; k--) {
+    //     document.write("*");
+    //   }
+    //   a += "&ensp;";
+    //   document.write(a);
+    //   document.write("<br>");
+    // }
+    let n = prompt("Nhập số");
+    let i = "";
+    let a = "";
+    let c = "";
+    for (let k = 0; k <= n; k++) {
+      i += "*";
+      document.write(i);
+    }
+    document.write("<br>");
+    for (let s = 0; s < n; s++) {
+      document.write("*");
+      for (let t = n * 4; t > 0; t--) {
+        a = "1";
+        document.write(a);
+      }
+      document.write("*");
+      document.write("<br>");
+    }
+    for (let d = 0; d <= n; d++) {
+      c += "*";
+      document.write(c);
+    }
+  </script>
+</html>
