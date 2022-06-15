@@ -32,7 +32,7 @@
       console.log(array[x]);
       for (e = 0; e < x; e++) {}
       if (array[x] == undefined) {
-        alert("đã hết giá trị của mảng");
+        alert("đã in ra hết giá trị của mảng");
       } else {
         result.innerHTML +=
           "<hr>" +
@@ -43,6 +43,13 @@
           e;
       }
       x++;
+    }
+    var b = 0;
+
+    for (var i = 1; i < 4; i = i + 2) {
+      b = b + i;
+      console.log(b);
+      console.log(i);
     }
   </script>
 </html>

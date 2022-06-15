@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    let n = prompt("Nhập vào số n");
+    let a = "";
+    let b = "";
+    // dãy sao
+    for (let i = n; i > 0; i--) {
+      if (i == n) {
+        document.write("*");
+      }
+      for (let j = i; j > 0; j--) {
+        a = "*";
+        document.write(a);
+      }
+      if (i == 1) {
+        document.write("*");
+      }
+    }
+    // dãy khoảng trắng
+
+    for (let k = n; k > 0; k--) {
+      document.write("<br>");
+      for (let i = n; i >= 1; i--) {
+        if (i == n) {
+          document.write("*");
+        }
+        for (let j = i; j > 1; j--) {
+          b = " &ensp;";
+          document.write(b);
+        }
+        if (i == 1) {
+          document.write("*");
+        }
+      }
+    }
+    // dãy sao
+    document.write("<br>");
+    for (let i = n; i > 0; i--) {
+      if (i == n) {
+        document.write("*");
+      }
+      for (let j = i; j > 0; j--) {
+        a = "*";
+        document.write(a);
+      }
+      if (i == 1) {
+        document.write("*");
+      }
+    }
+  </script>
+</html>
