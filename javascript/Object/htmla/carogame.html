@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="btn-change">Change value</button>
+  </body>
+  <script>
+    // khai báo
+    let array = [];
+    let amountW = prompt("Nhập váo hàng bàn cờ");
+    let amountH = prompt("Nhập vào số ô mỗi hàng hiển thị");
+    let btnChange = document.getElementById("btn-change");
+    btnChange.addEventListener("click", changeElement);
+    array.length = amountW;
+
+    for (let i = 0; i < array.length; i++) {
+      document.write("<br>");
+      array[i] = [];
+      for (let j = amountH; j > 0; j--) {
+        array[i][j] = 0;
+        document.write(array[i][j]);
+      }
+    }
+    function changeElement() {
+      let indexChange = prompt("Nhập vào vị trí phần tử cần thay đổi");
+      let indexElementChange = prompt("Nhập vào vị trí giá trị cần đổi");
+      let valueChange = prompt("nhập vào giá trị cần thay đổi");
+      for (let i = 1; i < array.length; i++) {
+        document.write("<br>");
+        for (let j = 1; j < array[i].length; j++) {
+          array[indexChange][indexElementChange] = valueChange;
+          document.write(array[i][j]);
+        }
+      }
+    }
+  </script>
+</html>
