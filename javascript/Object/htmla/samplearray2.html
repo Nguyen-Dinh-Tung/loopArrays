@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="output">Output</p>
+    <input type="text" id="input" />
+    <button id="btn-prize">Chuyển</button>
+  </body>
+  <script>
+    /*
+    bỏ ghi chú từng thành phần để xem code hihi
+    */
+    // nhập giá tri chuỗi và thêm '-' vào các số chẵn
+    // const btnOutput = document.getElementById("btn-prize");
+    // let input = document.getElementById("input");
+    // btnOutput.addEventListener("click", prize);
+    // let flag = 0;
+    // function prize() {
+    //   for (let value of input.value) {
+    //     if (value % 2 == 0) {
+    //       value += "-";
+    //     }
+    //     document.write(value);
+    //   }
+    // }
+    // Chuyển chuỗi chữ thường thành hoa và hoa thành thường
+    let btn = document.getElementById("btn-prize");
+    let array = [];
+    let flag = 0;
+    let b = "";
+    let temp = "";
+    btn.addEventListener("click", handleText);
+    function handleText() {
+      let input = document.getElementById("input").value;
+      b += input;
+      for (let i = 0; i < b.length; i++) {
+        if (b[i] === b[i].toLocaleLowerCase()) {
+          temp += b[i].toLocaleUpperCase();
+        } else {
+          temp += b[i].toLocaleLowerCase();
+        }
+      }
+      console.log(temp);
+      // for (let i = 0; i < c.length; i++) {
+      //   h += c[i];
+      // }
+      // for (let i = 0; i < d.length; i++) {
+      //   k += d[i];
+      // }
+      // temp = h.toLocaleLowerCase();
+      // h = temp;
+      // temp = k.toLocaleUpperCase();
+      // k = temp;
+      // temp = k + h;
+      // document.write(temp);
+      // function endDown() {
+      //   let contentLowCase = k.toLocaleUpperCase(f);
+      //   let contentUpCase = h.toLocaleLowerCase(g);
+      // }
+      // endDown();
+    }
+  </script>
+</html>
