@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="input" />
+    <button id="translate">Dịch</button>
+    <p id="result"></p>
+  </body>
+  <script>
+    let input = document.getElementById("input");
+    let btnTranslate = document.getElementById("translate");
+    let result = document.getElementById("result");
+    btnTranslate.addEventListener("click", handleTransLate);
+    function handleTransLate() {
+      switch (input.value) {
+        case "apple":
+          result.innerHTML = "Táo";
+          break;
+        case "origin":
+          result.innerHTML = "Nguồn gốc";
+          break;
+        case "handsome":
+          result.innerHTML = "Tùng đẹp trai";
+          break;
+        case "love":
+          result.innerHTML = "Tình yêu";
+          break;
+        case "show":
+          result.innerHTML = "Hiện ra";
+          break;
+        case "me":
+          result.innerHTML = "Tôi";
+          break;
+        case "who":
+          result.innerHTML = "Ai đó";
+          break;
+      }
+    }
+    function alerta() {
+      alert(
+        "Hãy nhập các chữ tiếng anh để check như sau : apple , origin , handsome , love ,show , me ,who (Lưu ý không viết hoa)"
+      );
+    }
+    window.onload(alerta());
+  </script>
+</html>
