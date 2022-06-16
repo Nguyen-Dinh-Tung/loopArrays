@@ -82,6 +82,7 @@
       alert("Số vừa nhập không phải phần tử của mảng");
     } */
     // bài 7
+    /*
     let array = [];
     let n = prompt("Nhập vào số phần tử");
     for (let i = 0; i < n; i++) {
@@ -96,7 +97,33 @@
         array[i + 1] = array[i + 2];
         array[i] = array[i + 1];
       }
+      }*/
+    // bài 8
+    /*
+    let array = [];
+    let n = prompt("Nhập vào số lượng phần tử");
+    for (let i = 0; i < n; i++) {
+      array[i] = +prompt("Nhập vào số lượng phần tử");
     }
+    array.sort((a, b) => {
+      return b - a;
+    });
+    console.log(array);
     document.write(array);
+    */
+    //  Bài 9
+    /*
+    let a = [];
+    let b = [];
+    let n = prompt("Nhập vào số lượng phần tử của 2 mảng a và b");
+    for (let i = 0; i < n; i++) {
+      a[i] = +prompt("Nhập vào giá trị mỗi phần tư");
+    }
+    for (let i = 0; i < n; i++) {
+      b[i] = +prompt("Nhập vào giá trị mỗi phần tư");
+    }
+    let c = a.concat(b);
+    document.write("Mảng mới là : " + c);
+    */
   </script>
 </html>
