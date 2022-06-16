@@ -8,9 +8,11 @@
   </head>
   <body></body>
   <script>
-    let x = 5;
-    let y = ++x;
-    let z = y++;
-    console.log(x, y, z);
+    let a = [];
+    let n = prompt("Nhập vào số lượng phần tử trong mảng");
+    for (let i = 0; i < n; i++) {
+      a[i] += prompt("Nhập vào value của mảng");
+    }
+    console.log(a);
   </script>
 </html>
