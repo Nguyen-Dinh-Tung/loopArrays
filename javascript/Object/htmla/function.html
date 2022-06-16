@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="number" id="input" />
+    <button onclick="total()">click</button>
+    <p id="result"></p>
+  </body>
+  <script>
+    // let number = document.getElementById("input");
+    // let result = document.getElementById("result");
+    // function pow(a) {
+    //   total = a * a;
+    //   return total;
+    // }
+    // function total() {
+    //   result.innerHTML = pow(number.value);
+    // }
+    // function sum(a, b) {
+    //   return a + b;
+    // }
+    // console.log(sum(2, 3));
+    function turnOn(machine) {
+      machine.isOn = true;
+    }
+    let computer = {
+      isOn: false,
+    };
+    turnOn(computer);
+    console.log(computer.isOn);
+    // function turnOn(machine) {
+    //   machine = {
+    //     isOn: true,
+    //   };
+    // }
+    // let computer = {
+    //   isOn: false,
+    // };
+    // turnOn(computer);
+    // console.log(computer.isOn);
+  </script>
+</html>
