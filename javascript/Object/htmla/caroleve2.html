@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="caro"></p>
+    <button id="btn-play-1">Người chơi 1</button>
+    <button id="btn-play-2">Người chơi 2</button>
+  </body>
+  <script>
+    let caro = [];
+    let renderLayout = document.getElementById("caro");
+    let amountR = prompt("Nhập số hàng");
+    let amountC = prompt("Nhập số cột");
+    let btnPlayOne = document.getElementById("btn-play-1");
+    let btnPlayTwo = document.getElementById("btn-play-2");
+
+    let flag = 0;
+    // xử lý bắt đầu chơi 1
+    btnPlayOne.addEventListener("click", hanlePlayFirst);
+    function hanlePlayFirst() {
+      let valueChange = "x";
+      let changeR = +prompt("Nhập số Hàng ");
+      let changeC = +prompt("Nhập số Cột");
+      caro[changeR][changeC] = valueChange;
+      changeLayout();
+      checkwin();
+    }
+    // xử lý người chơi 2
+    btnPlayTwo.addEventListener("click", handleLastPlay);
+    function handleLastPlay() {
+      let valueChange = "o";
+      let changeR = +prompt("Nhập số Hàng ");
+      let changeC = +prompt("Nhập số Cột ");
+      caro[changeR][changeC] = valueChange;
+      changeLayout();
+      checkwin();
+    }
+    // hiển thị layout
+    let str2 = "";
+    caro.length = amountR;
+    for (let i = 0; i < caro.length; i++) {
+      caro[i] = [];
+      str2 += "<br>";
+      for (let j = amountC; j > 0; j--) {
+        caro[i][j] = "(.)";
+        str2 += caro[i][j];
+      }
+    }
+    renderLayout.innerHTML = str2;
+    // hiển thị layout 2
+    function changeLayout() {
+      let str = "";
+      for (let i = 0; i < caro.length; i++) {
+        str += "<br>";
+        for (let j = 1; j < caro[i].length; j++) {
+          str += caro[i][j] + "&nbsp;&nbsp;";
+        }
+        //  console.log(str);
+      }
+      renderLayout.innerHTML = str;
+    }
+    // check win
+    function checkwin() {
+      for (let i = 0; i < caro.length; i++) {
+        for (let j = 0; j < caro[i].length; j++) {
+          if (
+            (caro[i][j] == "x" &&
+              caro[i][j + 1] == "x" &&
+              caro[i][j + 2] == "x") ||
+            (caro[i][j] == "o" &&
+              caro[i][j + 1] == "o" &&
+              caro[i][j + 2] == "o")
+          ) {
+            alert("Người vừa đánh cuối win");
+          } else if (
+            (caro[i][j] == "x" &&
+              caro[i + 1][j + 1] == "x" &&
+              caro[i + 2][j + 3] == "x") ||
+            (caro[i][j] == "o" &&
+              caro[i + 1][j + 1] == "o" &&
+              caro[i + 2][j + 3] == "o")
+          ) {
+            alert("Người vừa đánh cuối win");
+          } else if (
+            (caro[i][caro.length - 1] == "x" &&
+              caro[i + 1][caro.length - 2] == "x" &&
+              caro[i + 2][caro.length - 3] == "x") ||
+            (caro[i][caro.length - 1] == "o" &&
+              caro[i + 1][caro.length - 2] == "o" &&
+              caro[i + 2][caro.length - 3] == "o")
+          ) {
+            alert("Người chơi đánh cuối win");
+          }
+        }
+      }
+    }
+  </script>
+</html>
