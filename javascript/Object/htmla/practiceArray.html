@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport", initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    // bài 1
+    /*
+    let array = [1, 2, 3, 4, 65, 7, 8, 9, 10, 12];
+    let flag = 0;
+    for (let value of array) {
+      if (value > 10) {
+        flag++;
+      }
+    }
+    console.log(flag);
+    if (flag > 0) {
+      console.log("Value lớn hơn 10 gồm " + flag + " số");
+    } else {
+      console.log("value lớn hơn 10 không xuất hiện trong mảng");
+    }*/
+
+    // bài 2
+    /*
+    let array = [1, 2, 3, 4, 65, 7, 8, 9, 10, 12];
+    let max = array[0];
+    for (let i = 0; i < array.length; i++) {
+      if (max < array[i]) {
+        max = array[i];
+      }
+    }
+    console.log(max);
+    for (let i = 0; i < array.length; i++) {
+      if (max < array[i]) {
+        console.log(i);
+      }
+    } */
+    // bài 3
+    /*
+    let array = [1, 2, 3, 4, 65, 7, 8, 98];
+    let total = 0;
+    let max = array[0];
+    for (let i = 0; i < array.length; i++) {
+      if (max < array[i]) {
+        max = array[i];
+      }
+      total += array[i] / array.length;
+    }
+    console.log(max);
+    console.log(total);
+    */
+    //  bài 4
+    /*
+    let array = [1, 2, 3, 3, 54, 6, 7, 8, 98];
+    let pushArray = +prompt("Nhập vào số thêm vào mảng");
+    if (pushArray >= 0 && pushArray !== String) {
+      array.push(pushArray);
+    } else {
+      pushArray = +prompt("Nhập vào số thêm vào mảng");
+    }
+    array.sort((a, b) => {
+      return b - a;
+    });
+    console.log(array); */
+    // bài 6
+    /*
+    let array = [1, 2, 3, 43, 65, 7, 7, 4, 4, 5, 7, , 45, 5, 7];
+    let v = +prompt("Nhập số cần tìm");
+    let flag = 0;
+    for (let value of array) {
+      if (v == value) {
+        flag++;
+      }
+    }
+    if (flag > 0) {
+      alert(v + " số vừa nhập thuộc 1 phần tử của mảng");
+    } else {
+      alert("Số vừa nhập không phải phần tử của mảng");
+    } */
+    // bài 7
+    let array = [];
+    let n = prompt("Nhập vào số phần tử");
+    for (let i = 0; i < n; i++) {
+      array[i] = prompt("Nhập vào giá trị của mỗi pần tử");
+    }
+    let v = prompt("Nhập vào số cần check");
+    for (let i = 0; i < array.length; i++) {
+      if (v == array[i]) {
+        array[i] = array[i + 1];
+        array[array.length - 1] = 0;
+      } else if (v == array[i] && v == array[i + 1]) {
+        array[i + 1] = array[i + 2];
+        array[i] = array[i + 1];
+      }
+    }
+    document.write(array);
+  </script>
+</html>
