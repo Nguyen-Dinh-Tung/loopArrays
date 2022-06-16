@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Thử thách gõ phím mệt nghỉ</h2>
+    <textarea
+      id="input"
+      onkeydown="keydownchange()"
+      name="input"
+      rows="4"
+      cols="50"
+    ></textarea>
+  </body>
+  <script>
+    // khai báo
+    let str = "Tùng là tao";
+    let inputs = document.getElementById("input");
+    let flag = 0;
+    // handle change
+    function keydownchange() {
+      input.value = "";
+      if (flag >= str.length) {
+        flag = 0;
+        inputs.value = "";
+      } else if (flag < str.length) {
+        flag++;
+      }
+      for (let i = 0; i < flag; i++) {
+        inputs.value += str[i];
+      }
+    }
+  </script>
+</html>
