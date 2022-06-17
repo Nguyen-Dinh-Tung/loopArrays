@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    // bài 1 alertMessage
+    // function alertMessage() {
+    //   alert("helo");
+    // }
+    // bài 2
+    // let n = +prompt("Nhập vào 1 giá trị là số");
+    // function inputNumber(number) {
+    //   number++;
+    //   return number;
+    // }
+    // document.write(inputNumber(n));
+    // bài 3
+    // function numbers(a, b) {
+    //   let total = 0;
+    //   if (a > b) {
+    //     alert("Tham số thứ nhất lớn hơn tham số thứ 2");
+    //   } else if (a <= b) {
+    //     total = a + b;
+    //   }
+    //   return total;
+    // }
+    // let n = +prompt("Nhập vào số thứ nhất");
+    // let m = +prompt("Nhập vào số thứ nhất");
+    // document.write(numbers(n, m));
+    // bài 4 thêm vào đoạn mã
+    /*
+    function addNumbers() {
+      firstNum = 4;
+      secondNum = 8;
+      result = firstNum + secondNum;
+      return result;
+    }
+    result = 0;
+    //biến để hiển thị value của result trước khi họi hàm
+    alert(result);
+    result = addNumbers();
+    alert(result);*/
+    // bài 5
+    let star = [
+      "Polaris",
+      "Aldebaran",
+      "Deneb",
+      "Vega",
+      "Altair",
+      "Dubhe",
+      "Regulus",
+    ];
+    let constellation = [
+      "Ursa",
+      "Minor",
+      "Tarurus",
+      "Cygnus",
+      "Lyra",
+      "Aquila",
+      "Ursa",
+      "Major",
+      "Leo",
+    ];
+    function isNameStar(star) {
+      let n = prompt("Nhập vào tên ngôi sao cần tìm");
+      for (let i = 0; i < star.length; i++) {
+        if (n == star[i]) {
+          return i;
+        }
+      }
+    }
+    var indexStar = isNameStar(star);
+    console.log(indexStar);
+    function isNameConstellation(constellation) {
+      return constellation[indexStar];
+    }
+    var argument = isNameConstellation(constellation);
+    document.write(star[indexStar]);
+    document.write("<br>");
+    document.write(argument);
+  </script>
+</html>
