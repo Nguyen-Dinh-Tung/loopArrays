@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    // feet to meter
+    let ft = +prompt("Nhập vào số met");
+    function metTofeet(feet) {
+      let totalMet = feet * 3.279;
+      return totalMet;
+    }
+    document.write(
+      "Kết quả chuyển đổi sang feet là : " + metTofeet(ft) + " m" + "<br>"
+    );
+    // meter to feet
+    let m = prompt("Nhập vào số feet");
+    function feetToMeter(met) {
+      let totalMet = met * 0.305;
+      return totalMet;
+    }
+    document.write("Kết quả chuyển đổi sang met là : " + feetToMeter(m) + " m");
+  </script>
+</html>
