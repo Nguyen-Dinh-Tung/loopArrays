@@ -8,11 +8,15 @@
   </head>
   <body></body>
   <script>
-    let a = [];
-    let n = prompt("Nhập vào số lượng phần tử trong mảng");
-    for (let i = 0; i < n; i++) {
-      a[i] += prompt("Nhập vào value của mảng");
+    function swap(a, b) {
+      var temp = a;
+      a = b;
+      b = temp;
     }
-    console.log(a);
+
+    var a = 5;
+    var b = 10;
+    swap(a, b);
+    document.write("a = " + a + ", b = " + b);
   </script>
 </html>
