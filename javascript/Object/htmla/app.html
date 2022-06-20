@@ -37,17 +37,14 @@
     }
     // handle prints text
     function handlePrints() {
-      handleValuePrint();
-      print.innerHTML = str;
-    }
-    // Handle value prints
-    function handleValuePrint() {
       let x = "";
       for (let i = 0; i < array.length; i++) {
         x += i + " Tên sản phẩm " + array[i] + "<br>";
       }
       str = x;
+      print.innerHTML = str;
     }
+
     // handle edit text
     btnEdit.addEventListener("click", handleEdit);
     function handleEdit() {

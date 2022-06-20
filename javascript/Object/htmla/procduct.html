@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <input type="text" id="name" placeholder="Tên" />
+      </tr>
+      <tr>
+        <input type="text" id="price" placeholder="Giá" />
+      </tr>
+      <tr>
+        <input type="text" id="sll" placeholder="Số lượng" />
+      </tr>
+      <tr>
+        <input
+          type="text"
+          id="index"
+          placeholder="Số lượng"
+          style="display: none"
+        />
+      </tr>
+      <tr>
+        <button id="btn-add" onclick="addProduct()">add</button>
+        <button
+          id="btn-update"
+          onclick="updatePrucducts(document.getElementById('index').value )"
+        >
+          update
+        </button>
+      </tr>
+    </table>
+    <table>
+      <thead>
+        <tr>
+          <td>Số thứ tự</td>
+          <td>Tên sản phẩm</td>
+          <td>Giá</td>
+          <td>Mô tả</td>
+          <td>Xóa</td>
+          <td>Sửa</td>
+        </tr>
+      </thead>
+      <tbody id="produc-list"></tbody>
+    </table>
+  </body>
+  <script>
+    let listProducts = [
+      ["name", 123, "Cái giề"],
+      ["name", 12, "Cái giề"],
+      ["name", 3, "Cái giề"],
+      ["name", 5, "Cái giề"],
+    ];
+
+    function disPlayListProducts() {
+      let htmls = "";
+      listProducts.forEach((item, index) => {
+        htmls += "<tr>";
+        htmls += `<td>${index + 1} </td>`;
+        htmls += `<td>${item[0]} </td>`;
+        htmls += `<td>${item[1]} </td>`;
+        htmls += `<td>${item[2]} </td>`;
+        htmls += `<td><button class="btn-delete" onclick="deletee(${index})">delete</button></td>`;
+        htmls += `<td><button class="btn-edit" onclick="handleUpdate(${index})">edit</button></td>`;
+        htmls += "</tr>";
+      });
+      document.getElementById("produc-list").innerHTML = htmls;
+      document.getElementById("produc-list").innerHTML +=
+        "Số lượng sản phẩm : " + countProducts();
+    }
+    function deletee(index) {
+      //  htmls = "";
+      listProducts.splice(index, 1);
+      disPlayListProducts();
+    }
+    function addProduct() {
+      // htmls = "";
+      let name = document.getElementById("name").value;
+      let price = document.getElementById("price").value;
+      let sll = document.getElementById("sll").value;
+      let item = [name, price, sll];
+      listProducts.push(item);
+      disPlayListProducts();
+      document.getElementById("name").value = "";
+      document.getElementById("price").value = "";
+      document.getElementById("sll").value = "";
+    }
+
+    function handleUpdate(index) {
+      let item = listProducts[index];
+      document.getElementById("index").value = index;
+      document.getElementById("name").value = item[0];
+      document.getElementById("price").value = item[1];
+      document.getElementById("sll").value = item[2];
+    }
+    function updatePrucducts(index) {
+      // htmls = "";
+      let name = document.getElementById("name").value;
+      let price = document.getElementById("price").value;
+      let sll = document.getElementById("sll").value;
+      listProducts[index] = [name, price, sll];
+      document.getElementById("name").value = "";
+      document.getElementById("price").value = "";
+      document.getElementById("sll").value = "";
+      disPlayListProducts();
+    }
+    disPlayListProducts();
+    function countProducts() {
+      return listProducts.length;
+    }
+  </script>
+</html>
