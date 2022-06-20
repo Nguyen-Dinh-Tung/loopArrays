@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="input" />
+    <button id="btn-add">Thêm</button>
+    <button id="btn-edit">Sửa</button>
+    <button id="btn-delete">Xóa</button>
+    <br />
+    <p>Danh sách</p>
+    <p id="print"></p>
+  </body>
+  <script>
+    // var
+    const btnAdd = document.getElementById("btn-add");
+    const btnEdit = document.getElementById("btn-edit");
+    const btnDelete = document.getElementById("btn-delete");
+    let print = document.getElementById("print");
+    let input = document.getElementById("input");
+    let array = [];
+    let count = 1;
+    let index;
+    let str = "";
+    // handle add text
+    btnAdd.addEventListener("click", handleAdd);
+    function handleAdd() {
+      for (let i = 0; i < count; i++) {
+        array.push(input.value);
+        index = i;
+      }
+      handlePrints();
+    }
+    // handle prints text
+    function handlePrints() {
+      handleValuePrint();
+      print.innerHTML = str;
+    }
+    // Handle value prints
+    function handleValuePrint() {
+      let x = "";
+      for (let i = 0; i < array.length; i++) {
+        x += i + " Tên sản phẩm " + array[i] + "<br>";
+      }
+      str = x;
+    }
+    // handle edit text
+    btnEdit.addEventListener("click", handleEdit);
+    function handleEdit() {
+      let n = +prompt("Nhập vào vị trí muốn sửa đổi");
+      array[n] = input.value;
+      handlePrints();
+    }
+    // handeDelete text
+    btnDelete.addEventListener("click", handleDeleteText);
+    function handleDeleteText() {
+      let n = +prompt("Nhập vào vị trí muốn xóa");
+      array.splice(n, 1);
+      handlePrints();
+    }
+  </script>
+</html>
