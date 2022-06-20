@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    // function mydate(day, month, year) {
+    //   this.day = day;
+    //   this.month = month;
+    //   this.year = year;
+
+    //   this.getDate = function () {
+    //     return (
+    //       "Ngày : " +
+    //       this.day +
+    //       " Tháng : " +
+    //       this.month +
+    //       " Năm : " +
+    //       this.year
+    //     );
+    //   };
+    // }
+    // var myDate = new mydate(20, 06, 2022);
+    // console.log(myDate.getDate());
+    var MyDate = {
+      day: +prompt("Nhập vào ngày"),
+      month: +prompt("Nhập vào tháng"),
+      year: +prompt("Nhập vào năm"),
+      getDay: function () {
+        return "Ngày : " + this.day;
+      },
+      getMonth: function () {
+        return "Tháng : " + this.month;
+      },
+      getYear: function () {
+        return "Ngày : " + this.year;
+      },
+      setDay: function (day) {
+        return (this.day = day);
+      },
+      setMonth: function (month) {
+        return (this.month = month);
+      },
+      setYear: function (year) {
+        return (this.year = year);
+      },
+    };
+    MyDate.setDay(15);
+  </script>
+</html>

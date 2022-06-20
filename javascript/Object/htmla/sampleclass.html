@@ -8,9 +8,54 @@
   </head>
   <body></body>
   <script>
-    let n = prompt("s");
-    let array = [];
-    for (let value of array) {
-    }
+    // var students = {
+    //   id: 1,
+    //   name: "Nguyễn Đình Tùng",
+    //   adress: "Thanh Hóa",
+    //   getInfor: function () {
+    //     return (
+    //       "id: " + this.id + " name : " + this.name + " address: " + this.adress
+    //     );
+    //   },
+    // };
+    // console.log(students.getInfor());
+    // object literal / Hằng đối tượng
+    let person = {
+      name: {
+        first: "BOB",
+        last: "smits",
+      },
+      age: 24,
+      gender: "female",
+      interests: ["music", "game"],
+      bio: function () {
+        alert(
+          "Name : " +
+            this.name +
+            " Age : " +
+            this.age +
+            " Giới tính : " +
+            this.gender +
+            " Sở thích : " +
+            this.interests
+        );
+      },
+      greeting: function () {
+        alert("Hi im " + this.name + ".");
+      },
+    };
+    let myDataName = input.value;
+    person["name2"] = myDataName;
+    person.age = 10;
+    person["eyes"] = "green";
+    person.say = function () {
+      alert("Hai");
+    };
+    person["hair"] = "underCut";
+    console.log(person);
+    let a = 10;
+    let b = a;
+    a = 5;
+    console.log(b);
   </script>
 </html>

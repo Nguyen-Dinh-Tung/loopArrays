@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <canvas id="myCanvas" width="200" height="100"></canvas>
+  </body>
+  <script>
+    // VẼ TRÊN NỀN CANVAS
+    let c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    // Vẽ đường thẳng tréo
+    // ctx.moveTo(0, 0);
+    // ctx.lineTo(200, 300);
+    // ctx.stroke();
+
+    // Vẽ đương tròn
+    // ctx.beginPath();
+    // ctx.arc(95, 50, 40, 0, 2 * Math.PI);
+    // ctx.stroke();
+    // vẽ chữ
+    // ctx.font = "30px Arial";
+    // ctx.strokeText("Hello World", 10, 50);
+    // Tạo hiệu ứng grandient
+    /*
+    // Create gradient
+    var grd = ctx.createLinearGradient(0, 0, 200, 0);
+    grd.addColorStop(0, "red");
+    grd.addColorStop(1, "white");
+
+    // Fill with gradient
+    ctx.fillStyle = grd;
+    ctx.fillRect(10, 10, 150, 80);*/
+  </script>
+</html>
