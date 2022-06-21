@@ -10,12 +10,30 @@
     <p id="result"></p>
   </body>
   <script>
-    function myDate(day, month, year) {
-      this.day = day;
-      this.month = month;
-      this.year = year;
+    class User {
+      //  attribu
+      constructor(data) {
+        this.name = data[0];
+        this.email = data[1];
+        this.address = data[2];
+      }
+      // method
+      getInfo() {
+        return (
+          "name : " +
+          this.name +
+          " Email : " +
+          this.email +
+          " Address" +
+          this.address
+        );
+      }
+      setName(name) {
+        this.name = name;
+      }
     }
-    var newMyDate = new myDate(20, 12, 1998);
-    console.log(newMyDate.day);
+    let user = new User(["Tùng", "s30.tung@gmail", "Thanh Hóa"]);
+    user.setName("Phích");
+    console.log(user.getInfo());
   </script>
 </html>

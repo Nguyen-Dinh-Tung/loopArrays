@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    class Mobile {
+      // Thuộc tính
+      constructor(battery, memoryTexting, memoryMessageTo, memoryMessageSent) {
+        this.battery = battery;
+        this.memoryTexting = memoryTexting;
+        this.memoryMessageTo = memoryMessageTo;
+        this.memoryMessageSent = memoryMessageSent;
+      }
+      // chức năng
+      getAllAtribute() {
+        this.pertePin();
+        return (
+          "Dung lượng pin : " +
+          this.battery +
+          " Hộp tin soạn : " +
+          this.memoryTexting +
+          " Hộp tin đến : " +
+          this.memoryMessageTo +
+          " Hộp thư gửi đi : " +
+          this.memoryMessageSent
+        );
+      }
+      isStatusPhone() {
+        this.pertePin();
+        if (this.battery) {
+          alert("Điện thoại đang bật");
+        } else {
+          alert("Điện thoại đăng tắt");
+        }
+      }
+      chargePinPhone(number) {
+        this.pertePin();
+        this.battery += number;
+        if (this.battery > 100) {
+          this.battery = 100;
+        }
+        return this.battery;
+      }
+      getCapacityBattery() {
+        this.pertePin();
+        return this.battery;
+      }
+      texting(texting) {
+        if (this.battery) {
+          this.memoryTexting.push(texting);
+        }
+        this.pertePin();
+      }
+      receivedMessage(message) {
+        if (this.battery) {
+          this.memoryMessageTo.push(message);
+        }
+        this.pertePin();
+      }
+      envoyerMessage(message) {
+        this.pertePin();
+        if (this.battery) {
+          this.memoryMessageSent.push(message);
+        }
+      }
+      getReceivedMessage() {
+        this.pertePin();
+        if (this.battery) {
+          return this.memoryMessageTo;
+        }
+      }
+      getEnvoyerMessage() {
+        this.pertePin();
+        if (this.battery) {
+          return this.memoryMessageSent;
+        }
+      }
+      pertePin() {
+        this.battery = this.battery - 1;
+      }
+      canNotUse() {
+        this.battery = false;
+      }
+      sentMessage(text, phone) {
+        if (this.battery) {
+          this.memoryMessageSent.push(text);
+          phone.memoryMessageTo.push(text);
+        }
+      }
+    }
+
+    var iphone = new Mobile(80, [], [], []);
+    var samsung = new Mobile(80, [], [], []);
+    iphone.sentMessage("Hello", samsung);
+    console.log(samsung.getReceivedMessage());
+  </script>
+</html>

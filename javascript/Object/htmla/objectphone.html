@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    // mobile contructor
+    class Mobile {
+      // atb
+      constructor(battery, memoryTexting, messageTo, messageSent) {
+        this.battery = battery;
+        this.memoryTexting = memoryTexting;
+        this.messageTo = messageTo;
+        this.messageSent = messageSent;
+      }
+      // function
+      // getAllAtribute() {
+      //   return "Dung lượng pin : " + this.battery;
+      // }
+      isStatusPhone() {
+        return this.statusPhone == false;
+      }
+      setIsStatusPhone(open) {
+        return (this.statusPhone = open);
+      }
+      chargePinPhone() {
+        return this.chargePin + "Đang xạc";
+      }
+      texting(texting) {
+        if (canNotUse() == false) {
+          alert("Không thể dùng chức năng này");
+        } else {
+          this.memoryTexting = texting;
+        }
+      }
+      receivedMessage(message) {
+        this.messageSent = message;
+      }
+      envoyerMessage(message) {
+        this.messageSent = message;
+      }
+      getReceivedMessage(message) {
+        this.messageTo = message;
+      }
+      getEnvoyerMessage(message) {
+        this.messageSent = message;
+      }
+      pertePin() {
+        this.battery = this.battery - 1;
+      }
+      canNotUse() {
+        if (isStatusPhone == false) {
+          alert("Không thể sử dụng chức năng nào nữa");
+        }
+        return false;
+      }
+    }
+
+    var nokia = new Mobile(50, "Đang soạn", [], []);
+    var iphone = new Mobile(50, "Đang soạn", [], []);
+    nokia.texting("Hello");
+    console.log(nokia.getReceivedMessage());
+  </script>
+</html>
