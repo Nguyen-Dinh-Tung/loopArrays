@@ -10,9 +10,10 @@
     <canvas id="canvas" width="1000" height="1000"> </canvas>
   </body>
   <script>
+    // contructor retangel
     var rectangel = {
-      width: this.width,
-      height: this.height,
+      width: +prompt("Nhập vào chiều dài") /*this.width*/,
+      height: +prompt("Nhập vào chiều rộng") /*this.width*/,
       getAreaRectangel: function () {
         return this.width * this.height;
       },
@@ -20,10 +21,13 @@
         return (this.width + this.height) * 2;
       },
     };
-    rectangel.width = 50;
-    rectangel.height = 150;
+    // set width height
+    // rectangel.width = 50;
+    // rectangel.height = 150;
+    // result area & perimeter
     console.log(rectangel.getAreaRectangel());
     console.log(rectangel.getPerimeterRectangel());
+    // arc rectangel
     function arcRectangel() {
       var canvas = document.getElementById("canvas");
       var ctx = canvas.getContext("2d");

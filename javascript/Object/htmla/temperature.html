@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    var Temperature = {
+      celsius: this.celsius,
+      getFahrenheitByCelsius: function () {
+        return (this.celsius * 9) / 5 + 32;
+      },
+      getKenvinByCelsius: function () {
+        return this.celsius + 273.15;
+      },
+    };
+    let valueCelsius = +prompt("Nhập vào độ c");
+    Temperature.celsius = valueCelsius;
+    console.log(Temperature.getFahrenheitByCelsius());
+    console.log(Temperature.getKenvinByCelsius());
+  </script>
+</html>
