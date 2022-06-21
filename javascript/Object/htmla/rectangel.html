@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <canvas id="canvas" width="1000" height="1000"> </canvas>
+  </body>
+  <script>
+    var rectangel = {
+      width: this.width,
+      height: this.height,
+      getAreaRectangel: function () {
+        return this.width * this.height;
+      },
+      getPerimeterRectangel: function () {
+        return (this.width + this.height) * 2;
+      },
+    };
+    rectangel.width = 50;
+    rectangel.height = 150;
+    console.log(rectangel.getAreaRectangel());
+    console.log(rectangel.getPerimeterRectangel());
+    function arcRectangel() {
+      var canvas = document.getElementById("canvas");
+      var ctx = canvas.getContext("2d");
+      ctx.fillStyle = "greenyellow";
+      ctx.fillRect(50, 50, rectangel.width, rectangel.height);
+    }
+    arcRectangel();
+  </script>
+</html>

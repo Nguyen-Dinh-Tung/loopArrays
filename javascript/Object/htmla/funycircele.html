@@ -7,22 +7,38 @@
     <title>Document</title>
   </head>
   <body>
-    <canvas id="myCanvas" width="500" height="200"></canvas>
+    <canvas id="myCanvas" width="1300px" height="750px"></canvas>
+    <script>
+      function Circele(x, y, radius) {
+        this.x = x;
+        this.y = y;
+        this.radius = radius;
+      }
+      // hình tròn đặt width height theo biến
+      // function createrCircele() {
+      //   let radius = 40;
+      //   var canvas = document.getElementById("myCanvas");
+      //   var rect = canvas.getBoundingClientRect();
+      //   let center = 500;
+      //   canvas.width = center;
+      //   canvas.height = center;
+      //   var ctx = canvas.getContext("2d");
+      //   var circle = new Circele(center / 2, center / 2, radius);
+      //   ctx.beginPath();
+      //   ctx.arc(circle.x, circle.y, circle.radius, 0, 2 * Math.PI);
+      //   ctx.fill();
+      // }
+      // createrCircele();
+      // hình tròn với bán kính ngẫu nhiên
+      function createrCircele() {
+        var ctx = document.getElementById("myCanvas").getContext("2d");
+        var radius = Math.floor(Math.random() * 80);
+        var circle = new Circele(500, 500, radius);
+        ctx.beginPath();
+        ctx.arc(circle.x, circle.y, circle.radius, 0, 2 * Math.PI);
+        ctx.fill();
+      }
+      createrCircele();
+    </script>
   </body>
-  <script>
-    function Circele(x, y, radius) {
-      this.x = x;
-      this.y = y;
-      this.radius = radius;
-    }
-    function createrCircele() {
-      var ctx = document.getElementById("myCanvas").getContext("2d");
-      console.log(ctx);
-      var circle = new Circele(500, 500, 80);
-      ctx.beginPath();
-      ctx.arc(circle.x, circle.y, circle.radius, 0, 2 * Math.PI);
-      ctx.fill();
-    }
-    createrCircele();
-  </script>
 </html>
