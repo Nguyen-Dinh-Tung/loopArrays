@@ -27,9 +27,9 @@
     // var myDate = new mydate(20, 06, 2022);
     // console.log(myDate.getDate());
     var MyDate = {
-      day: +prompt("Nhập vào ngày"),
-      month: +prompt("Nhập vào tháng"),
-      year: +prompt("Nhập vào năm"),
+      day: this.day,
+      month: this.month,
+      year: this.year,
       getDay: function () {
         return "Ngày : " + this.day;
       },
@@ -49,6 +49,10 @@
         return (this.year = year);
       },
     };
-    MyDate.setDay(15);
+    MyDate.setDay(20);
+    MyDate.setMonth(06);
+    MyDate.setYear(2022);
+    MyDate.getDay().toString();
+    console.log(MyDate.getDay().toString());
   </script>
 </html>

@@ -10,10 +10,12 @@
     <p id="result"></p>
   </body>
   <script>
-    let result = document.getElementById("result");
-    for (let i = 0; i < 8; i++) {
-      result.innerHTML += i + "<br>";
-      document.write(i + "<br>");
+    function myDate(day, month, year) {
+      this.day = day;
+      this.month = month;
+      this.year = year;
     }
+    var newMyDate = new myDate(20, 12, 1998);
+    console.log(newMyDate.day);
   </script>
 </html>

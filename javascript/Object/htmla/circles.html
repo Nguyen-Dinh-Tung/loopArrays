@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    /*
+    var circele = {
+      radius: this.radius,
+      color: this.color,
+      setRadius: function (radius) {
+        return (this.radius = radius);
+      },
+      getRadius: function () {
+        return "Ban kinh " + this.radius + "cm";
+      },
+      getArea: function () {
+        return Math.PI * this.radius * this.radius;
+      },
+      getColor: function () {
+        return "Màu " + this.color;
+      },
+    };
+    circele.radius = 5;
+    circele.color = "Red";
+    circele.getArea();
+    console.log(circele.getColor());*/
+
+    function circele(radius, color) {
+      this.radius = radius;
+      this.color = color;
+
+      this.getRadis = function () {
+        return "Bán kính : " + this.radius + " cm";
+      };
+      this.getArea = function () {
+        return Math.PI * radius * radius;
+      };
+      this.setRadius = function (radius) {
+        return (this.radius = radius);
+      };
+    }
+    var newCircele = new circele(5, "Red");
+    console.log(newCircele.getArea());
+  </script>
+</html>
