@@ -1,39 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
+<html>
   <body>
-    <p id="result"></p>
+    <canvas
+      id="myCanvas"
+      width="300"
+      height="150"
+      style="border: 1px solid #d3d3d3"
+      >Trình duyệt của bạn không hỗ trợ thẻ canvas trong HTML5.</canvas
+    >
+
+    <script>
+      var c = document.getElementById("myCanvas");
+      var ctx = c.getContext("2d");
+      ctx.rotate((20 * Math.PI) / 180);
+      ctx.fillRect(20, 0, 200, 20);
+    </script>
   </body>
-  <script>
-    class User {
-      //  attribu
-      constructor(data) {
-        this.name = data[0];
-        this.email = data[1];
-        this.address = data[2];
-      }
-      // method
-      getInfo() {
-        return (
-          "name : " +
-          this.name +
-          " Email : " +
-          this.email +
-          " Address" +
-          this.address
-        );
-      }
-      setName(name) {
-        this.name = name;
-      }
-    }
-    let user = new User(["Tùng", "s30.tung@gmail", "Thanh Hóa"]);
-    user.setName("Phích");
-    console.log(user.getInfo());
-  </script>
 </html>
